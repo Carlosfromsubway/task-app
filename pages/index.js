@@ -5,13 +5,14 @@ import Header from '@/components/header'
 import Form from '@/components/form'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-
+import Tasklist from '@/components/tasklist'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState([]);
+  const [editTodo, setEditTodo] =useState(null);
 
   return (
     <>
@@ -30,7 +31,14 @@ export default function Home() {
       setInput={setInput}
       todos={todos}
       setTodos={setTodos}
+      editTodo={editTodo}
+      setEditTodo={setEditTodo}
       />
+      </div>
+      <div>
+      <Tasklist 
+      setEditTodo={setEditTodo}
+      todos={todos} setTodos={setTodos}/>
       </div>
       </div>
       </main>
