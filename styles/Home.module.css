@@ -18,16 +18,52 @@
   width: 500px;
   justify-content: flex-start;
   height: 700px;
-  background-color: rgb(28, 114, 242);
+  background-color: rgba(28, 114, 242, 0.816);
   border-radius: 10px;
   border: 2px solid rgb(15, 50, 246);
-  opacity: 70%;
+  
 }
 
 .bluebutton {
-  width: 200px;
-  height: 70px;
+  width: 100px;
+  height: 30px;
   border-radius: 11px;
   background-color:transparent;
+  color: aliceblue;
+  margin-left: 10px;
   border: 2px solid rgb(15, 50, 246);
 }
+
+.bluebutton:hover{
+  background-color: #00eaffc5;
+}
+
+
+.bluebuttonspacer {
+display: flex;
+flex-direction: row;
+padding-left: 20px;
+}
+
+.form{
+  display: flex;
+  flex-direction: row;
+}
+
+.space {
+  padding-left: 20px;
+  margin-top: 20px;
+}
+.Heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+
+.Heading:hover{
+  opacity: 90%;
+}
+
+

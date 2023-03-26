@@ -36,7 +36,7 @@ const Form = ({input, setInput, todos, setTodos, editTodo, setEditTodo}) =>{
 
     };
     return(
-        <div>
+        <div className={styles.form}>
             <form onSubmit={onFormSubmit}>
                 <input type="text" 
                 placeholder="Enter a new task..." 
@@ -44,12 +44,14 @@ const Form = ({input, setInput, todos, setTodos, editTodo, setEditTodo}) =>{
                 required
                 onChange={onInputChange}
                 className={styles.task}></input>
+                
                 <button className={styles.bluebutton} type="submit">
                     {editTodo ? "OK" : "Add"}
                 </button>
+               
             </form>
         </div>
     );
 };
 
-export default Form
+export default Form;

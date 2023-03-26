@@ -25,6 +25,8 @@ export default function Home() {
       <main className={styles.main}>
       <div className={styles.Container}>
       <Header/>
+        <div className={styles.space}> 
+     
       <div className={styles.formcontainer}>
       <Form
       input={input}
@@ -39,6 +41,7 @@ export default function Home() {
       <Tasklist 
       setEditTodo={setEditTodo}
       todos={todos} setTodos={setTodos}/>
+      </div>
       </div>
       </div>
       </main>

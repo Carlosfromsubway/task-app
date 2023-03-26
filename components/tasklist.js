@@ -36,17 +36,20 @@ const Tasklist = ({todos, setTodos, setEditTodo}) => {
                     <i className={styles.check}></i>
                 </button>
 
-                <button className={styles.edit} onClick={() => handleEdit(todo)}>
-                <Image src="/edit icon.png"
+                
+                <Image src="/edit circle.png"
                 width={100}
-                height={60}/>
-                </button>
+                height={60}
+                onClick={() => handleEdit(todo)}/>
+                
 
-                <button className={styles.delete} onClick={() => handleDelete(todo)}>
-                <Image src="/delete icon.png"
+                
+                <Image src="/X circle.png"
                 width={100}
-                height={60}/>
-                </button>
+                height={60}
+                onClick={() => handleDelete(todo)}
+                />
+               
                 </li>
             ))}
             Tasklist
