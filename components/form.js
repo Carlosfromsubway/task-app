@@ -46,7 +46,7 @@ const Form = ({input, setInput, todos, setTodos, editTodo, setEditTodo}) =>{
                 className={styles.task}></input>
                 
                 <button className={styles.bluebutton} type="submit">
-                    {editTodo ? "OK" : "Add"}
+                    {editTodo ? "Confirm" : "Add"}
                 </button>
                
             </form>
