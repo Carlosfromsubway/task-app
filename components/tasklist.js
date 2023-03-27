@@ -1,6 +1,8 @@
 import React from "react";
 import styles from '@/styles/Home.module.css'
+import styled from "styled-components";
 import Image from "next/image";
+
 const Tasklist = ({todos, setTodos, setEditTodo}) => {
     const handleComplete = (todo) => {
         setTodos(
@@ -26,34 +28,52 @@ const Tasklist = ({todos, setTodos, setEditTodo}) => {
         <div>
             {todos.map ((todo) => (
                 <li className={styles.tasklist} key={todo.id}>
-                <input
+                <Inpoot
                 type="text"
                 value={todo.title}
                 className={`list ${todo.completed ? "completed" : ""}`}
                 onChange={(event) => event.preventDefault()}
                 />
-                <button className={styles.complete}  onClick={() => handleComplete(todo)}>
-                    <i className={styles.check}></i>
-                </button>
-
+                
+                <Image src="/check circle.png"
+                width={40}
+                height={20}
+                onClick={() => handleComplete(todo)}/>
                 
                 <Image src="/edit circle.png"
-                width={100}
-                height={60}
+                width={40}
+                height={20}
                 onClick={() => handleEdit(todo)}/>
                 
 
                 
                 <Image src="/X circle.png"
-                width={100}
-                height={60}
+                width={40}
+                height={20}
                 onClick={() => handleDelete(todo)}
                 />
                
                 </li>
             ))}
-            Tasklist
+            
         </div>
     );
 };
+
+
+const Inpoot = styled.input  `
+border-radius: 10px;
+border: 2px solid #00eaffc5;
+color: blue;
+background-color: transparent;
+`
+const completed = {
+
+     textdecoration: "line-through",
+     textdecorationcolor: "#00eaffc5",
+     textdecorationstyle: "solid",
+        
+};
+
 export default Tasklist;
+

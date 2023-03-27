@@ -27,7 +27,7 @@ export default function Home() {
       <Header/>
         <div className={styles.space}> 
      
-      <div className={styles.formcontainer}>
+      <div className={styles.white}>
       <Form
       input={input}
       setInput={setInput}
@@ -37,10 +37,11 @@ export default function Home() {
       setEditTodo={setEditTodo}
       />
       </div>
-      <div>
+      <div className={styles.formcontainer}>
       <Tasklist 
       setEditTodo={setEditTodo}
-      todos={todos} setTodos={setTodos}/>
+      todos={todos} setTodos={setTodos}
+      />
       </div>
       </div>
       </div>
