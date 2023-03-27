@@ -116,3 +116,7 @@ text-decoration-style: solid;
 .input::placeholder{
   color: aliceblue;
 }
+
+.taskbutton {
+  margin-right: 20px;
+}

@@ -44,6 +44,7 @@ export default function Tasklist ({todos, setTodos, setEditTodo,  me=""}) {
                 height={20}
                 onClick={() => handleComplete(todo)}
                 margin-top={me}
+                className={styles.taskbutton}
                 />
                 
                 <Image src="/edit circle.png"
