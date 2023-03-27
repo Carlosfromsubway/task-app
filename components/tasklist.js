@@ -3,7 +3,11 @@ import styles from '@/styles/Home.module.css'
 import styled from "styled-components";
 import Image from "next/image";
 
-const Tasklist = ({todos, setTodos, setEditTodo}) => {
+export default function Tasklist ({todos, setTodos, setEditTodo,  me=""}) {
+
+   
+
+
     const handleComplete = (todo) => {
         setTodos(
             todos.map((item) => {
@@ -38,7 +42,9 @@ const Tasklist = ({todos, setTodos, setEditTodo}) => {
                 <Image src="/check circle.png"
                 width={40}
                 height={20}
-                onClick={() => handleComplete(todo)}/>
+                onClick={() => handleComplete(todo)}
+                margin-top={me}
+                />
                 
                 <Image src="/edit circle.png"
                 width={40}
@@ -63,9 +69,10 @@ const Tasklist = ({todos, setTodos, setEditTodo}) => {
 
 const Inpoot = styled.input  `
 border-radius: 10px;
-border: 2px solid #00eaffc5;
+border: 1px solid #00eaffc5;
 color: blue;
 background-color: transparent;
+margin-top: -10px;
 `
 const completed = {
 
@@ -75,5 +82,5 @@ const completed = {
         
 };
 
-export default Tasklist;
+
 

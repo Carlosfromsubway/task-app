@@ -9,8 +9,8 @@ export default function Header(){
             <Image
             className={styles.Heading}
             src="/Create task.png"
-            width={330}
-            height={80}
+            width={420}
+            height={100}
             />
         </div>
     )
