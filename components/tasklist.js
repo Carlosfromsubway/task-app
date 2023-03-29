@@ -50,7 +50,8 @@ export default function Tasklist ({todos, setTodos, setEditTodo,  me=""}) {
                 <Image src="/edit circle.png"
                 width={40}
                 height={20}
-                onClick={() => handleEdit(todo)}/>
+                onClick={() => handleEdit(todo)}
+                className={styles.taskbutton}/>
                 
 
                 
@@ -58,6 +59,7 @@ export default function Tasklist ({todos, setTodos, setEditTodo,  me=""}) {
                 width={40}
                 height={20}
                 onClick={() => handleDelete(todo)}
+                className={styles.taskbutton}
                 />
                
                 </li>
@@ -74,6 +76,8 @@ border: 1px solid #00eaffc5;
 color: blue;
 background-color: transparent;
 margin-top: -10px;
+height: 25px;
+width: 250px;
 `
 const completed = {
 
