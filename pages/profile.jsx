@@ -1,7 +1,7 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "./api/auth/[...nextauth]"
-
+import styles from '@/styles/Home.module.css'
 export default function Component() {
   const { data: session } = useSession()
 
@@ -18,7 +18,9 @@ export default function Component() {
   return (
     <>
       Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
+      <button 
+      className={styles.bluebutton}
+      onClick={() => signIn()}>Sign in</button>
     </>
   )
 }

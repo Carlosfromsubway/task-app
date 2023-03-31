@@ -1,11 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useSession, signIn, signOut } from "next-auth/react"
+import { getServerSession } from "next-auth/next"
+import { authOptions } from "./api/auth/[...nextauth]"
 import React, {useState} from 'react'
 import Header from '@/components/header'
 import Form from '@/components/form'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Tasklist from '@/components/tasklist'
+import Component from './profile'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -23,6 +27,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <Component/>
       <div className={styles.Container}>
       <Header/>
         <div className={styles.space}> 
