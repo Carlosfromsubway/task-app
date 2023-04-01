@@ -68,7 +68,7 @@ export default function Tasklist({ todos, setTodos, setEditTodo, me = "" }) {
     border-radius: 10px;
     border: 1px solid #00eaffc5;
     color: blue;
-    background-color: transparent;
+    background-color: white;
     margin-top: -10px;
     height: 25px;
     width: 250px;
